@@ -1,94 +1,118 @@
+/* Layout Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0a192f 0%, #000000 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 90vh;
-    background: url('../assets/eth5.jpg') no-repeat center center fixed;
-    background-size: cover;
-  }
-  
-  .container {
-    width: 450px;
-    max-width: 500px;
-    background-color: rgba(0, 0, 0, 0.650);
-    padding: 40px;
-    border-radius: 5px;
-    box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Header */
+body > h1 {
+    color: #64ffda !important;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin: 40px 0;
     text-align: center;
-  }
-  
-  h1 {
-    font-size: 32px;
-    color: #ffffff;
-    margin-bottom: 30px;
-  }
-  
-  .form-group {
+    text-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 400px;
+    background: rgba(13, 25, 48, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: auto;
+}
+
+h3 {
+    color: #e6f1ff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-group {
     margin-bottom: 20px;
     width: 100%;
-  }
-  
-  label {
+}
+
+label {
     display: block;
-    font-size: 14px;
-    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #ccd6f6;
     text-align: left;
     margin-bottom: 5px;
-  }
-  
-  input {
+}
+
+input {
     width: 95%;
     padding: 12px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    color: #000000;
-    background-color: rgb(255, 255, 255); 
-  }
-  
-  button {
-    width: 100%;
-    padding: 12px;
-    background-color: #198a7b;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    font-size: 19px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #44afa1;
-  }
-  
-  button:focus {
+    border: 2px solid #233554;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    color: #e6f1ff;
+    background-color: rgba(17, 34, 64, 0.95);
+    transition: all 0.3s ease;
+}
+
+input:focus {
     outline: none;
-  }
-  
-  button:active {
-    transform: translateY(2px);
-  }
-  
-  @media (max-width: 768px) {
-    .container {
-      width: 90%;
-    }
-  }
-  button {
-    width: 50%; 
-    padding: 10px; 
-    background-color: #198a7b;
-    color: #ffffff;
+    border-color: #64ffda;
+    box-shadow: 0 0 10px rgba(100, 255, 218, 0.2);
+}
+
+input::placeholder {
+    color: #8892b0;
+}
+
+button {
+    width: 50%;
+    padding: 12px;
+    background: linear-gradient(45deg, #64ffda, #20c997);
+    color: #0a192f;
     border: none;
-    border-radius: 5px;
-    font-size: 19px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin: 0 auto; 
-  }
+    transition: all 0.3s ease;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(100, 255, 218, 0.2);
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(100, 255, 218, 0.3);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 30px;
+    }
+}
+
+/* Update the Login heading style */
+.container h1 {
+    color: #64ffda;
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
   

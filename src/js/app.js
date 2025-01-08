@@ -53,7 +53,17 @@ window.App = {
               var name = data[1];
               var party = data[2];
               var voteCount = data[3];
-              var viewCandidates = `<tr><td> <input class="form-check-input" type="radio" name="candidate" value="${id}" id=${id}>` + name + "</td><td>" + party + "</td><td>" + voteCount + "</td></tr>"
+              var viewCandidates = `
+                <tr>
+                  <td>
+                    <div class="radio-container">
+                      <input class="form-check-input" type="radio" name="candidate" value="${id}" id="candidate${id}">
+                      <label class="candidate-name" for="candidate${id}">${name}</label>
+                    </div>
+                  </td>
+                  <td>${party}</td>
+                  <td>${voteCount}</td>
+                </tr>`;
               $("#boxCandidate").append(viewCandidates)
             })
         }

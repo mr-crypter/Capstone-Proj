@@ -1,101 +1,316 @@
+/* Layout Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 20px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0a192f 0%, #000000 100%);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    min-height: 60vh;
-    background: url('../assets/eth5.jpg') no-repeat center center fixed;
-    background-size: cover;
-  }
-  
-  .container {
-    width: 750px;
-    max-width: 900px;
-    background-color: rgba(0, 0, 0, 0.650);
-    padding: 40px;
-    padding-bottom: 2%;
-    padding-top: 2%;
-    border-radius: 5px;
-    box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.1);
-    text-align: center;
-  }
-  
-  h1 {
-    font-size: 32px;
-    color: #ffffff;
-    margin-bottom: 30px;
-  }
+}
 
-  h2 {
-    font-size: 25px;
-    color: #ffffff;
-    margin-bottom: 25px;
-  }
-  
-  h3 {
-    color: #ffffff;
-  }
-
-  p {
-    color: #ffffff;
-  }
-  
-  .table {
+/* Header Section */
+#head {
     width: 100%;
+    max-width: 900px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(13, 25, 48, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 20px;
-    background-color: rgba(124, 123, 123, 0.65);
-    border-radius: 5px;
-    border-collapse: separate;
-    border-spacing: 25px;
-  }
-  
-  th {
-    font-size: 18px;
-    color: #ffffff;
-  }
-  
-  td {
-    font-size: 16px;
-    color: #ffffff;
-    row-gap: 100%;
-  }
-  
-  #voteButton {
-    width: 40%;
-    padding: 12px;
-    background-color: #198a7b;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    font-size: 19px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #voteButton:hover {
-    background-color: #44afa1;
-  }
-  
-  #voteButton:focus {
-    outline: none;
-  }
-  
-  #voteButton:active {
-    transform: translateY(2px);
-  }
-  
-  #accountAddress {
-    font-size: 18px;
-    color: #ffffff;
+}
+
+/* Table Styles */
+.table {
+    width: 100%;
+    background: rgba(17, 34, 64, 0.8);
+    border-radius: 10px;
+    border: 1px solid #233554;
+    border-spacing: 0;
+    margin-bottom: 30px;
+}
+
+.table th, .table td {
+    padding: 15px 20px;
+    text-align: left;
+}
+
+.table th {
+    background: rgba(100, 255, 218, 0.05);
+    color: #64ffda;
+    font-weight: 600;
+}
+
+/* Voting Section */
+#vote {
+    text-align: center;
     margin-top: 20px;
-  }
-  
-  @media (max-width: 768px) {
-    .container {
-      width: 90%;
+}
+
+/* Account Address */
+#account {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#accountAddress {
+    display: inline-block;
+    padding: 12px 24px;
+    background: rgba(17, 34, 64, 0.8);
+    border-radius: 8px;
+    border: 1px solid #233554;
+    color: #64ffda;
+    font-size: 0.9rem;
+}
+
+/* Dates Display */
+#dates {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(17, 34, 64, 0.8);
+    border-radius: 8px;
+    border: 1px solid #233554;
+    color: #64ffda;
+    margin: 10px 0;
+}
+
+/* Radio Container */
+.radio-container {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+/* Message Display */
+#msg {
+    margin-top: 15px;
+    min-height: 24px;
+}
+
+#msg p {
+    color: #64ffda;
+    margin: 0;
+}
+
+/* Custom Radio Button Styling */
+.form-check-input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #233554;
+    border-radius: 50%;
+    background: rgba(17, 34, 64, 0.8);
+    margin-right: 15px;
+    position: relative;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+}
+
+.form-check-input[type="radio"]:hover {
+    border-color: #64ffda;
+    box-shadow: 0 0 10px rgba(100, 255, 218, 0.2);
+}
+
+.form-check-input[type="radio"]:checked {
+    border-color: #64ffda;
+    background: rgba(17, 34, 64, 0.8);
+}
+
+.form-check-input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #64ffda;
+    animation: radioCheck 0.2s ease-in-out;
+}
+
+@keyframes radioCheck {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
     }
-  }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Candidate Name Styling */
+.candidate-name {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.candidate-name:hover {
+    background: rgba(100, 255, 218, 0.05);
+}
+
+/* Update table cell padding and alignment */
+.table td {
+    padding: 15px 20px;
+    vertical-align: middle;
+}
+
+/* Radio button container */
+.radio-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Update the viewCandidates template in app.js to use these new classes */
+  
+/* Add these styles for better text visibility */
+h1 {
+    color: #64ffda;
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    color: #e6f1ff;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    color: #ccd6f6;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+p {
+    color: #a8b2d1;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Table text improvements */
+.table th {
+    color: #64ffda;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: rgba(100, 255, 218, 0.05);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table td {
+    color: #e6f1ff;
+    font-size: 1.1rem;
+}
+
+/* Account address styling */
+#accountAddress {
+    color: #64ffda;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    background: rgba(17, 34, 64, 0.95);
+}
+
+/* Dates display */
+#dates {
+    color: #e6f1ff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background: rgba(17, 34, 64, 0.95);
+}
+
+/* Candidate name */
+.candidate-name {
+    color: #e6f1ff;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Message styling */
+#msg p {
+    color: #64ffda;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Vote Button Styling */
+#voteButton {
+    width: auto;
+    min-width: 200px;
+    padding: 15px 40px;
+    background: linear-gradient(45deg, #64ffda, #20c997);
+    color: #0a192f;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(100, 255, 218, 0.2);
+    margin: 20px auto;
+    display: block;
+}
+
+#voteButton:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(100, 255, 218, 0.3);
+    background: linear-gradient(45deg, #20c997, #64ffda);
+}
+
+#voteButton:active:not(:disabled) {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(100, 255, 218, 0.2);
+}
+
+#voteButton:disabled {
+    background: linear-gradient(45deg, #1a2c4d, #233554);
+    color: #8892b0;
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 0.8;
+}
+
+/* Vote Section Container */
+#vote {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(17, 34, 64, 0.5);
+    border-radius: 12px;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+#vote p {
+    color: #ccd6f6;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
   
