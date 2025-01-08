@@ -18,11 +18,11 @@
 
 ## Screenshots
 
-![Login Page](https://github.com/Krish-Depani/Decentralized-Voting-System-Using-Ethereum-Blockchain/blob/main/public/login%20ss.png)
+![Login Page](https://github.com/mr-crypter/Capstone-Proj/blob/main/public/login%20ss.png
 
-![Admin Page](https://github.com/Krish-Depani/Decentralized-Voting-System-Using-Ethereum-Blockchain/blob/main/public/admin%20ss.png)
+![Admin Page](https://github.com/mr-crypter/Capstone-Proj/blob/main/public/admin%20ss.png)
 
-![Voter Page](https://github.com/Krish-Depani/Decentralized-Voting-System-Using-Ethereum-Blockchain/blob/main/public/index%20ss.png)
+![Voter Page](https://github.com/mr-crypter/Capstone-Proj/blob/main/public/index%20ss.png)
 
 ## Installation
 
